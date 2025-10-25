@@ -1,8 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2q8ryww3y8n1"]
+[gd_scene load_steps=10 format=3 uid="uid://b2q8ryww3y8n1"]
 
 [ext_resource type="Texture2D" uid="uid://c1rrorkr58fiy" path="res://assets/circle.png" id="1_qufq8"]
 [ext_resource type="Texture2D" uid="uid://cv01snbrea5q4" path="res://assets/empty.png" id="1_vau7r"]
 [ext_resource type="Texture2D" uid="uid://qs2kba0g722i" path="res://assets/cross.png" id="2_c87x8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qufq8"]
+font_size = 64
+font_color = Color(0, 1, 0.67058825, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c87x8"]
+font_size = 64
+font_color = Color(0, 1, 0.67058825, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdpf8"]
+font_size = 48
+font_color = Color(0, 1, 0.67058825, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0n56p"]
+font_size = 64
+font_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7vgwn"]
+font_size = 64
+font_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jmft"]
+font_size = 48
+font_color = Color(1, 0.84313726, 0, 1)
 
 [node name="GameScreen" type="Control"]
 layout_mode = 3
@@ -29,44 +53,102 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+
+[node name="Player1" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Player1"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Player1/VBoxContainer"]
+layout_mode = 2
+
+[node name="player" type="Label" parent="CenterContainer/VBoxContainer/Player1/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Player 1"
+label_settings = SubResource("LabelSettings_qufq8")
+horizontal_alignment = 1
+
+[node name="piece" type="Label" parent="CenterContainer/VBoxContainer/Player1/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "X"
+label_settings = SubResource("LabelSettings_c87x8")
+horizontal_alignment = 1
+
+[node name="score" type="Label" parent="CenterContainer/VBoxContainer/Player1/VBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_bdpf8")
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="cell_0" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_0" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("2_c87x8")
 
-[node name="cell_1" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_1" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_vau7r")
 
-[node name="cell_2" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_2" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_vau7r")
 
-[node name="cell_3" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_3" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_vau7r")
 
-[node name="cell_4" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_4" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("2_c87x8")
 
-[node name="cell_5" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_5" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_vau7r")
 
-[node name="cell_6" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_6" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_qufq8")
 
-[node name="cell_7" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_7" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("2_c87x8")
 
-[node name="cell_8" type="TextureRect" parent="CenterContainer/GridContainer"]
+[node name="cell_8" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 texture = ExtResource("1_qufq8")
+
+[node name="Player2" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/Player2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Player2/VBoxContainer"]
+layout_mode = 2
+
+[node name="player" type="Label" parent="CenterContainer/VBoxContainer/Player2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Player 1"
+label_settings = SubResource("LabelSettings_0n56p")
+horizontal_alignment = 1
+
+[node name="piece" type="Label" parent="CenterContainer/VBoxContainer/Player2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "X"
+label_settings = SubResource("LabelSettings_7vgwn")
+horizontal_alignment = 1
+
+[node name="score" type="Label" parent="CenterContainer/VBoxContainer/Player2/VBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_8jmft")
