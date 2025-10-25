@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2q8ryww3y8n1"]
+
+[ext_resource type="Texture2D" uid="uid://c1rrorkr58fiy" path="res://assets/circle.png" id="1_qufq8"]
+[ext_resource type="Texture2D" uid="uid://cv01snbrea5q4" path="res://assets/empty.png" id="1_vau7r"]
+[ext_resource type="Texture2D" uid="uid://qs2kba0g722i" path="res://assets/cross.png" id="2_c87x8"]
+
+[node name="GameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11764706, 0.16470589, 0.21960784, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="cell_0" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_c87x8")
+
+[node name="cell_1" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_vau7r")
+
+[node name="cell_2" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_vau7r")
+
+[node name="cell_3" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_vau7r")
+
+[node name="cell_4" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_c87x8")
+
+[node name="cell_5" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_vau7r")
+
+[node name="cell_6" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_qufq8")
+
+[node name="cell_7" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_c87x8")
+
+[node name="cell_8" type="TextureRect" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+texture = ExtResource("1_qufq8")
