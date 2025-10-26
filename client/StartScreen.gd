@@ -10,16 +10,10 @@ func _ready() -> void:
 	button.connect("pressed", _on_button_pressed)
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func _on_button_pressed():
 	if not username.text.strip_edges().is_empty():
-		create_or_authenticate_user()
+		var nakama_result = await NakamaService._authenticate_or_create_user(username.text)
+		print(nakama_result)
 	else:
 		error.text = error_message
-	pass
-
-func create_or_authenticate_user():
 	pass
