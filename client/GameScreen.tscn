@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2q8ryww3y8n1"]
+[gd_scene load_steps=9 format=3 uid="uid://b2q8ryww3y8n1"]
 
 [ext_resource type="Script" uid="uid://d37fespdsfxq8" path="res://GameScreen.gd" id="1_mnua3"]
-[ext_resource type="Texture2D" uid="uid://cv01snbrea5q4" path="res://assets/empty.png" id="1_vau7r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qufq8"]
 font_size = 64
@@ -102,41 +101,32 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 3
 
-[node name="cell_0" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_0" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_1" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_1" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_2" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_2" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_3" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_3" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_4" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_4" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_5" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_5" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_6" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_6" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_7" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_7" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
-[node name="cell_8" type="TextureRect" parent="CenterContainer/VBoxContainer/GridContainer"]
+[node name="cell_8" type="TextureButton" parent="CenterContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-texture = ExtResource("1_vau7r")
 
 [node name="Player2" type="PanelContainer" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

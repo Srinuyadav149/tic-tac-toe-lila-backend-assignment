@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func _on_button_pressed():
 	if not username.text.strip_edges().is_empty():
-		var nakama_result = await NakamaService._authenticate_or_create_user(username.text)
+		var nakama_result = await NakamaService._authenticate_or_create_user_async(username.text)
 		print(nakama_result)
 	else:
 		error.text = error_message
